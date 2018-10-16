@@ -3,9 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
+    "mobx": "^5.5.0",
+    "mobx-react": "^5.2.8",
+    "mobx-state-tree": "^3.5.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.4"
+    "react-scripts": "2.0.4",
+    "react-spinkit": "^3.0.0",
+    "react-table": "^6.8.6"
   },
   "scripts": {
     "start": "react-scripts start",

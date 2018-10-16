@@ -1,0 +1,400 @@
+{
+  "id": 241,
+  "externalId": "",
+  "productGroupId": 0,
+  "productCategory": "ACTIVITIES",
+  "box": false,
+  "inventoryLocal": true,
+  "inventorySupportsPricing": false,
+  "inventorySupportsAvailability": true,
+  "lastPublished": "2018-09-14T05:21:39.521Z",
+  "published": false,
+  "title": "24 hour Kayak rental",
+  "description": "",
+  "excerpt": "",
+  "cancellationPolicy": {
+    "id": 7,
+    "title": "Default",
+    "penaltyRules": [
+      {
+        "id": 2,
+        "cutoffHours": 0,
+        "charge": 0,
+        "chargeType": "PERCENTAGE"
+      }
+    ],
+    "tax": null
+  },
+  "overrideBarcodeFormat": false,
+  "barcodeType": "QR_CODE",
+  "timeZone": "Canada/Eastern",
+  "mainContactFields": [
+    {
+      "field": "ADDRESS",
+      "required": true
+    }
+  ],
+  "requiredCustomerFields": [
+    "address"
+  ],
+  "keywords": [],
+  "flags": [],
+  "slug": null,
+  "baseLanguage": "en",
+  "languages": [
+    "EN"
+  ],
+  "paymentCurrencies": [],
+  "customFields": [],
+  "tagGroups": [],
+  "categories": [],
+  "keyPhoto": null,
+  "photos": [],
+  "videos": [],
+  "vendor": {
+    "id": 5,
+    "title": "Arctic Adventures",
+    "currencyCode": "CAD",
+    "showInvoiceIdOnTicket": false,
+    "showAgentDetailsOnTicket": false,
+    "showPaymentsOnInvoice": false
+  },
+  "boxedVendor": null,
+  "storedExternally": false,
+  "pluginId": null,
+  "reviewRating": 0,
+  "reviewCount": 0,
+  "activityType": "ATTRACTION",
+  "bookingType": "DATE_AND_TIME",
+  "scheduleType": "FIXED",
+  "capacityType": "LIMITED",
+  "passExpiryType": null,
+  "fixedPassExpiryDate": null,
+  "meetingType": "MEET_ON_LOCATION",
+  "privateActivity": false,
+  "passCapacity": 10,
+  "passValidForDays": 365,
+  "passesAvailable": 0,
+  "dressCode": false,
+  "passportRequired": false,
+  "supportedAccessibilityTypes": [],
+  "startPoints": [],
+  "bookingQuestions": [],
+  "passengerFields": [],
+  "inclusions": [],
+  "included": "",
+  "exclusions": [],
+  "excluded": null,
+  "requirements": "",
+  "knowBeforeYouGoItems": [],
+  "attention": "",
+  "locationCode": null,
+  "bookingCutoffMinutes": 0,
+  "bookingCutoffHours": 0,
+  "bookingCutoffDays": 0,
+  "bookingCutoffWeeks": 0,
+  "requestDeadlineMinutes": 0,
+  "requestDeadlineHours": 0,
+  "requestDeadlineDays": 2,
+  "requestDeadlineWeeks": 0,
+  "boxedActivityId": 0,
+  "comboActivity": true,
+  "allowCustomizedBookings": false,
+  "dayBasedAvailability": false,
+  "selectFromDayOptions": false,
+  "dayOptions": [],
+  "activityCategories": [],
+  "activityAttributes": [],
+  "guidanceTypes": [],
+  "defaultRateId": 27,
+  "rates": [
+    {
+      "id": 27,
+      "title": "Default rate",
+      "description": null,
+      "index": 0,
+      "rateCode": null,
+      "pricedPerPerson": true,
+      "minPerBooking": 1,
+      "maxPerBooking": 0,
+      "cancellationPolicy": {
+        "id": 7,
+        "created": [
+          2018,
+          10,
+          9,
+          13,
+          31,
+          19,
+          152000000
+        ],
+        "title": "Default",
+        "tax": null,
+        "penaltyRules": [
+          {
+            "id": 2,
+            "created": [
+              2018,
+              10,
+              9,
+              13,
+              31,
+              19,
+              152000000
+            ],
+            "cutoffHours": 0,
+            "percentage": 0
+          }
+        ]
+      },
+      "fixedPassExpiryDate": null,
+      "passValidForDays": 0,
+      "pickupSelectionType": "UNAVAILABLE",
+      "pickupPricingType": "INCLUDED_IN_PRICE",
+      "pickupPricedPerPerson": false,
+      "dropoffSelectionType": "UNAVAILABLE",
+      "dropoffPricingType": "INCLUDED_IN_PRICE",
+      "dropoffPricedPerPerson": false,
+      "extraConfigs": [],
+      "startTimeIds": [],
+      "pricingCategoryIds": []
+    }
+  ],
+  "ticketPerPerson": false,
+  "durationType": "HOURS",
+  "duration": 1,
+  "durationMinutes": 0,
+  "durationHours": 1,
+  "durationDays": 0,
+  "durationWeeks": 0,
+  "durationText": "1 hour",
+  "minAge": 0,
+  "nextDefaultPrice": 1000,
+  "nextDefaultPriceMoney": {
+    "amount": 1000,
+    "currency": "ISK"
+  },
+  "pickupService": false,
+  "pickupAllotment": false,
+  "useComponentPickupAllotments": false,
+  "pickupFlags": [],
+  "customPickupAllowed": false,
+  "pickupMinutesBefore": 0,
+  "noPickupMsg": "",
+  "showGlobalPickupMsg": false,
+  "showNoPickupMsg": false,
+  "dropoffService": false,
+  "dropoffFlags": [],
+  "customDropoffAllowed": false,
+  "difficultyLevel": "VERY_EASY",
+  "pricingCategories": [
+    {
+      "id": 4,
+      "title": "Adults",
+      "ticketCategory": "ADULT",
+      "occupancy": 1,
+      "ageQualified": true,
+      "minAge": 13,
+      "maxAge": 64,
+      "dependent": false,
+      "masterCategoryId": 5,
+      "maxPerMaster": 0,
+      "sumDependentCategories": false,
+      "maxDependentSum": 0,
+      "internalUseOnly": false,
+      "flags": [],
+      "defaultCategory": true,
+      "fullTitle": "Adults (13 - 64)"
+    }
+  ],
+  "agendaItems": [],
+  "startTimes": [
+    {
+      "id": 553,
+      "hour": 10,
+      "minute": 0,
+      "overrideTimeWhenPickup": false,
+      "pickupHour": 0,
+      "pickupMinute": 0,
+      "durationType": "H",
+      "duration": 1,
+      "durationMinutes": 0,
+      "durationHours": 1,
+      "durationDays": 0,
+      "durationWeeks": 0,
+      "flags": []
+    }
+  ],
+  "bookableExtras": [],
+  "route": null,
+  "hasOpeningHours": false,
+  "defaultOpeningHours": {
+    "id": 170,
+    "created": [
+      2018,
+      9,
+      14,
+      5,
+      21,
+      39,
+      571000000
+    ],
+    "monday": {
+      "id": 1457,
+      "created": [
+        2018,
+        9,
+        14,
+        5,
+        21,
+        39,
+        574000000
+      ],
+      "open24Hours": false,
+      "timeIntervals": [
+        {
+          "openFrom": [
+            9,
+            0
+          ],
+          "openForHours": 8,
+          "openForMinutes": 0,
+          "frequency": null
+        }
+      ]
+    },
+    "tuesday": {
+      "id": 1458,
+      "created": [
+        2018,
+        9,
+        14,
+        5,
+        21,
+        39,
+        580000000
+      ],
+      "open24Hours": false,
+      "timeIntervals": [
+        {
+          "openFrom": [
+            9,
+            0
+          ],
+          "openForHours": 8,
+          "openForMinutes": 0,
+          "frequency": null
+        }
+      ]
+    },
+    "wednesday": {
+      "id": 1459,
+      "created": [
+        2018,
+        9,
+        14,
+        5,
+        21,
+        39,
+        586000000
+      ],
+      "open24Hours": false,
+      "timeIntervals": []
+    },
+    "thursday": {
+      "id": 1460,
+      "created": [
+        2018,
+        9,
+        14,
+        5,
+        21,
+        39,
+        592000000
+      ],
+      "open24Hours": false,
+      "timeIntervals": [
+        {
+          "openFrom": [
+            9,
+            0
+          ],
+          "openForHours": 8,
+          "openForMinutes": 0,
+          "frequency": null
+        }
+      ]
+    },
+    "friday": {
+      "id": 1461,
+      "created": [
+        2018,
+        9,
+        14,
+        5,
+        21,
+        39,
+        599000000
+      ],
+      "open24Hours": false,
+      "timeIntervals": [
+        {
+          "openFrom": [
+            9,
+            0
+          ],
+          "openForHours": 8,
+          "openForMinutes": 0,
+          "frequency": null
+        }
+      ]
+    },
+    "saturday": {
+      "id": 1462,
+      "created": [
+        2018,
+        9,
+        14,
+        5,
+        21,
+        39,
+        606000000
+      ],
+      "open24Hours": false,
+      "timeIntervals": []
+    },
+    "sunday": {
+      "id": 1463,
+      "created": [
+        2018,
+        9,
+        14,
+        5,
+        21,
+        39,
+        614000000
+      ],
+      "open24Hours": false,
+      "timeIntervals": []
+    }
+  },
+  "seasonalOpeningHours": [],
+  "displaySettings": {
+    "showPickupPlaces": false,
+    "showRouteMap": false,
+    "selectRateBasedOnStartTime": false,
+    "customFields": []
+  },
+  "hasBoxes": false,
+  "requestDeadline": 172800000,
+  "bookingCutoff": 0,
+  "actualId": 241,
+  "actualVendor": {
+    "id": 5,
+    "title": "Arctic Adventures",
+    "currencyCode": "CAD",
+    "showInvoiceIdOnTicket": false,
+    "showAgentDetailsOnTicket": false,
+    "showPaymentsOnInvoice": false
+  }
+}
