@@ -7,7 +7,8 @@ export const Product = types.model({
     priceFrom: types.optional(types.string, ""),
     canImport:types.optional(types.boolean, false),
     photoUrl: types.optional(types.string, ""),
-    bokunId: types.optional(types.integer, -1)
+    bokunId: types.optional(types.integer, -1),
+    isBeeingImported: types.optional(types.boolean, false)
 
 });
 

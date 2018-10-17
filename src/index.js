@@ -78,11 +78,15 @@ class ExpandableTable extends React.Component {
                     data={this.props.store.products}
                     columns={columns}
                     className="-striped -highlight"
+                    style={{
+                        height: "500px"
+                    }}
                     SubComponent={row => <div style={{padding: '20px'}}>
                         <ActivityImportSummary
                             row={row}
                             data={this.props.store.products}
                         />
+
                     </div>}
                 />
 

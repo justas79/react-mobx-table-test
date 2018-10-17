@@ -1,45 +1,25 @@
 import React from "react";
 import {RootStore, storex} from "./RootStore";
+import * as Spinner from "react-spinkit";
 
 class ActivityImportPanel extends React.Component {
 
-    constructor(props) {
-
-        console.log('constructor', props);
-        super(props);
-        // This binding is necessary to make `this` work in the callback
-        this.importActivity = this.importActivity.bind(this);
-    }
-
-    importActivity(bokunId) {
-        console.log('importing', bokunId);
-        var millisecondsToWait = 1000;
-        var that = this;
-        setTimeout(function() {
-
-            let responseBokunId = 2735;
-            //import product and receive Bokun id simulation
-
-
-            //TODO: need to update storex for this product, so it has bokunId value
-            that.props.store.importProduct(bokunId);
-
-
-
-        }, millisecondsToWait);
-    }
-
     render() {
-
         console.log('render of ActivityImportPanel');
 
         let bokunId = this.props.item.original.bokunId;
         let viatorId = this.props.item.original.id;
         return (
             <div>
-                {bokunId !== -1 ?
-                    <a href={'http://localhost:3000/products/activities/' + bokunId}>{bokunId}</a> :
-                    <button onClick={e => this.props.store.importProduct(viatorId)}>Import</button>
+
+                {this.props.item.original.isBeeingImported ?
+                    <div style={{display:'inline'}}> <Spinner style={{display: 'inline', padding: '15px'}}  name="three-bounce"/></div> :
+                    null }
+
+                {bokunId === -1 ?
+                    <button onClick={e => this.props.store.importProduct(viatorId)}>Import</button> :
+                    <a href={'http://localhost:3000/products/activities/' + bokunId}>{bokunId}</a>
+
                 }
             </div>
         );

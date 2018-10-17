@@ -39,19 +39,26 @@ export const RootStore = types.model({
                 }));
             });
         }
-        function getProduct(index) {
-            console.log('will get product', index);
+
+        function setProductBeeingImported(viatorId, state) {
+            console.log('Setting as beeing imported for viator id', viatorId);
+            self.products.find(p => p.id === viatorId).isBeeingImported = state;
+            self.isFetchInProgress = true;
+            self.isFetchInProgress = false;
         }
 
         function setProductImported(viatorId, bokunId) {
             console.log('will set product inmported for viator id', viatorId);
             self.products.find(p => p.id === viatorId).bokunId = bokunId;
+            self.products.find(p => p.id === viatorId).isBeeingImported = false;
+            self.isFetchInProgress = true;
+            self.isFetchInProgress = false;
         }
 
 
 
 
-        return {setLoading, addProduct, addProductsFromResponse, setProductImported}
+        return {setLoading, addProduct, addProductsFromResponse, setProductImported, setProductBeeingImported}
     })
     .actions(self => {
 
@@ -96,12 +103,15 @@ export const RootStore = types.model({
         function importProduct(viatorId) {
             console.log('importing product!', viatorId);
 
-            var millisecondsToWait = 1000;
+            self.setProductBeeingImported(viatorId, true);
+
+            var millisecondsToWait = 2000;
             setTimeout(function() {
 
                 let bokunId = 111;
                 console.log('imported! will set bokun id to: ', bokunId);
                 self.setProductImported(viatorId, bokunId);
+                //self.setProductBeeingImported(viatorId, false);
 
             }, millisecondsToWait);
 
