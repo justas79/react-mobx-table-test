@@ -7,7 +7,7 @@ import {types, onSnapshot} from "mobx-state-tree"
 import axios from 'axios';
 import {observer} from "mobx-react";
 import {RootStore, storex} from "./RootStore";
-import {data, columns} from "./TableData";
+import {columns} from "./TableData";
 import {ActivityImportSummary} from "./ActivityImportSummary";
 import * as Spinner from 'react-spinkit';
 
@@ -19,7 +19,9 @@ class ViatorImport extends React.Component {
     }
 
     render() {
-        console.log("rendering with ", this.props.storex.isFetchInProgress);
+
+        console.log('render of viator inport');
+
         return (
             <div>
 
@@ -67,16 +69,19 @@ class ViatorImport extends React.Component {
 
 class ExpandableTable extends React.Component {
     render() {
+
+        console.log('render of ExpandableTable');
+
         return (
             <div>
                 <ReactTable
-                    data={data}
+                    data={this.props.store.products}
                     columns={columns}
                     className="-striped -highlight"
                     SubComponent={row => <div style={{padding: '20px'}}>
                         <ActivityImportSummary
                             row={row}
-                            data={data}
+                            data={this.props.store.products}
                         />
                     </div>}
                 />

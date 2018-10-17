@@ -1,54 +1,85 @@
 import React from "react";
-
+import {RootStore, storex} from "./RootStore";
 
 class ActivityImportPanel extends React.Component {
 
-    importActivity(item) {
-        console.log('Importing:', item);
+    constructor(props) {
+
+        console.log('constructor', props);
+        super(props);
+        // This binding is necessary to make `this` work in the callback
+        this.importActivity = this.importActivity.bind(this);
+    }
+
+    importActivity(bokunId) {
+        console.log('importing', bokunId);
+        var millisecondsToWait = 1000;
+        var that = this;
+        setTimeout(function() {
+
+            let responseBokunId = 2735;
+            //import product and receive Bokun id simulation
+
+
+            //TODO: need to update storex for this product, so it has bokunId value
+            that.props.store.importProduct(bokunId);
+
+
+
+        }, millisecondsToWait);
     }
 
     render() {
+
+        console.log('render of ActivityImportPanel');
+
+        let bokunId = this.props.item.original.bokunId;
+        let viatorId = this.props.item.original.id;
         return (
             <div>
-                <button onClick={() => this.importActivity(this.props.item)}>Import</button>
+                {bokunId !== -1 ?
+                    <a href={'http://localhost:3000/products/activities/' + bokunId}>{bokunId}</a> :
+                    <button onClick={e => this.props.store.importProduct(viatorId)}>Import</button>
+                }
             </div>
         );
     }
 }
 
-export const data = [{
-    id: "ABC1232",
-    title: 'Walk downtown LA',
-    descr: 'This tour is balblablablab and blablablabl',
+// export const data = [{
+//     id: "ABC1232",
+//     title: 'Walk downtown LA',
+//     descr: 'This tour is balblablablab and blablablabl',
+//
+//     importValuesPreview: {
+//         detail1: 'DATE_AND_TIME',
+//         detail2: 23,
+//         detail3: ""
+//     },
+//
+//     importPossibleValues: {
+//         detail1: {values: ['DATE', 'PICKUP']},
+//         detail3: ""
+//     }
+//
+// },
+//     {
+//         id: "XX1",
+//         title: 'Elephant room',
+//         descr: 'Ticket to museum ',
+//
+//         importValuesPreview: {
+//             detail1: 'FREESALE',
+//             detail2: 23,
+//         },
+//
+//         importPossibleValues: {
+//             detail1: [{title: "Meet on location", value: "MEET_ON_LOCATION"}]
+//         }
+//
+//     }
+// ];
 
-    importValuesPreview: {
-        detail1: 'DATE_AND_TIME',
-        detail2: 23,
-        detail3: ""
-    },
-
-    importPossibleValues: {
-        detail1: {values: ['DATE', 'PICKUP']},
-        detail3: ""
-    }
-
-},
-    {
-        id: "XX1",
-        title: 'Elephant room',
-        descr: 'Ticket to museum ',
-
-        importValuesPreview: {
-            detail1: 'FREESALE',
-            detail2: 23,
-        },
-
-        importPossibleValues: {
-            detail1: [{title: "Meet on location", value: "MEET_ON_LOCATION"}]
-        }
-
-    }
-];
 
 export const columns = [{
     Header: 'Viator Id',
@@ -61,9 +92,8 @@ export const columns = [{
     accessor: 'descr',
     Cell: props => <span className='string'>{props.value}</span> // Custom cell
 }, {
-    id: 'importDetails',
-    Header: 'Import details',
-    accessor: d => d.importValuesPreview.detail1
+    Header: 'Prices from',
+    accessor: 'priceFrom',
 }, {
     id: 'importButton',
     className: "right",
@@ -71,7 +101,7 @@ export const columns = [{
     style: {
         textAlign: "right"
     },
-    Cell: props => <ActivityImportPanel item={props}/>
+    Cell: props => <ActivityImportPanel item={props} store={storex} />
 
 
 }, {
